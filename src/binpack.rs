@@ -1,3 +1,6 @@
+//! Binpacking algorithm to split large policies into a group of smaller ones.
+//!
+//! Very much a work in progress
 use std::hash::Hash;
 
 use crate::model::*;

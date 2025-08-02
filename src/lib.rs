@@ -1,4 +1,4 @@
-//! prototype of iam-manager, tool for generating and managing AWS IAM policies
+//! prototype of aws-policy-processor, tool for processing and validating AWS IAM policies
 
 pub mod binpack;
 pub mod model;

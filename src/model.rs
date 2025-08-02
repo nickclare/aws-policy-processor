@@ -1,3 +1,7 @@
+//! Basic data model representation of AWS IAM policies, and associated serialization code
+//!
+//! Because of AWS's use of keys like `Action`/`NotAction` which are mutually
+//! exclusive, we need some custom Serde implementations
 use serde::{Deserialize, Serialize, de::Visitor, ser::SerializeMap};
 
 #[derive(Clone, PartialEq, Serialize, Debug)]
