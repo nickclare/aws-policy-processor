@@ -1,0 +1,10 @@
+{
+  "Sid": "WeirdStatement",
+  "Effect": "Allow",
+  "Resource": "my-arn",
+  "Condition": "panic",
+  "NotAction": [
+    "ec2:panic",
+    "rds:deletealldata"
+  ]
+}
