@@ -1,0 +1,116 @@
+{
+  "Name" : "transform",
+  "Actions" : [ {
+    "Name" : "AssociateConnectorResource",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateProfile",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "profile"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteProfile",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "profile"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetConnector",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListProfiles",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "RejectConnector",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateProfile",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "profile"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  } ],
+  "Resources" : [ {
+    "Name" : "profile",
+    "ARNFormats" : [ "arn:${Partition}:transform:${Region}:${Account}:profile/${Identifier}" ]
+  } ],
+  "Version" : "v1.3"
+}
