@@ -39,20 +39,20 @@ pub enum ValidationErrorKind {
 }
 
 trait ValidationRule {
-    fn validate(&self, statement: &Statement) -> Option<ValidationErrorKind>;
+    fn validate(&self, statement: &Statement) -> Vec<ValidationErrorKind>;
 }
 
-struct FnValidationRule(Box<dyn Fn(&Statement) -> Option<ValidationErrorKind>>);
+struct FnValidationRule(Box<dyn Fn(&Statement) -> Vec<ValidationErrorKind>>);
 
 impl ValidationRule for FnValidationRule {
-    fn validate(&self, statement: &Statement) -> Option<ValidationErrorKind> {
+    fn validate(&self, statement: &Statement) -> Vec<ValidationErrorKind> {
         self.0(statement)
     }
 }
 
 impl<F> From<F> for FnValidationRule
 where
-    F: Fn(&Statement) -> Option<ValidationErrorKind> + 'static,
+    F: Fn(&Statement) -> Vec<ValidationErrorKind> + 'static,
 {
     fn from(value: F) -> Self {
         FnValidationRule(Box::new(value))
@@ -85,31 +85,56 @@ impl Default for RuleSet {
 }
 
 mod rules {
+    use std::sync::LazyLock;
+
+    use regex::Regex;
+
     use super::*;
 
-    pub(crate) fn resource_not_permitted(statement: &Statement) -> Option<ValidationErrorKind> {
+    /// Check if the statement has a (Not)Resource value.
+    pub(crate) fn resource_not_permitted(statement: &Statement) -> Vec<ValidationErrorKind> {
         if let Some(ref _resources) = statement.resources {
             // todo: check its not just a `*`, which may be allowed
-            Some(ValidationErrorKind::ResourceNotPermitted)
+            vec![ValidationErrorKind::ResourceNotPermitted]
         } else {
-            None
+            vec![]
         }
     }
 
-    pub(crate) fn not_actions_not_permitted(statement: &Statement) -> Option<ValidationErrorKind> {
+    /// Check if the statement has NotAction instead of Action.
+    pub(crate) fn not_actions_not_permitted(statement: &Statement) -> Vec<ValidationErrorKind> {
         if matches!(statement.actions, Actions::NotActions(_)) {
-            Some(ValidationErrorKind::NotActionNotPermitted)
+            vec![ValidationErrorKind::NotActionNotPermitted]
         } else {
-            None
+            vec![]
         }
     }
 
-    pub(crate) fn condition_not_permitted(statement: &Statement) -> Option<ValidationErrorKind> {
+    /// Check if the statement has any condition element
+    pub(crate) fn condition_not_permitted(statement: &Statement) -> Vec<ValidationErrorKind> {
         if let Some(ref _condition) = statement.condition {
-            Some(ValidationErrorKind::ConditionNotPermitted)
+            vec![ValidationErrorKind::ConditionNotPermitted]
         } else {
-            None
+            vec![]
         }
+    }
+
+    /// Check that all actions only have wildcards at the end of the action name.
+    pub(crate) fn wildcards_only_at_end(statement: &Statement) -> Vec<ValidationErrorKind> {
+        static ALLOWED_PATTERN: LazyLock<Regex> = LazyLock::new(|| {
+            Regex::new(r"^[a-zA-Z0-9]+:[a-zA-Z0-9]+(\*?)$").expect("regex should compile")
+        });
+        statement
+            .actions
+            .get_actions()
+            .filter_map(|action| {
+                if !ALLOWED_PATTERN.is_match(action) {
+                    Some(ValidationErrorKind::InvalidAction(action.clone()))
+                } else {
+                    None
+                }
+            })
+            .collect()
     }
 }
 
@@ -127,9 +152,7 @@ pub fn validate_statement(statement: &Statement, kind: PolicyKind) -> Result<()>
 fn validate_against_rules(statement: &Statement, rules: &RuleSet) -> Result<()> {
     let mut errors = Vec::new();
     for r in &rules.rules {
-        if let Some(error) = r.validate(statement) {
-            errors.push(error);
-        }
+        errors.append(&mut r.validate(statement));
     }
 
     into_result(errors, &statement.sid)
@@ -171,7 +194,8 @@ fn validate_service_control_statement(statement: &Statement) -> Result<()> {
             &ruleset![
                 not_actions_not_permitted,
                 condition_not_permitted,
-                resource_not_permitted
+                resource_not_permitted,
+                wildcards_only_at_end
             ],
         ),
         Effect::Deny => Ok(()),

@@ -5,6 +5,8 @@
   "Condition": "panic",
   "NotAction": [
     "ec2:panic",
-    "rds:deletealldata"
+    "rds:deletealldata",
+    "ec2:Get*",
+    "ec2:*Instance"
   ]
 }

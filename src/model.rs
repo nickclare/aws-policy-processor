@@ -33,6 +33,17 @@ pub enum Actions {
     NotActions(Vec<String>),
 }
 
+impl Actions {
+    pub fn get_actions(&self) -> impl Iterator<Item = &String> {
+        let action_names = match self {
+            Actions::Actions(a) => a,
+            Actions::NotActions(a) => a,
+        };
+
+        action_names.iter()
+    }
+}
+
 #[derive(Clone, PartialEq, Debug)]
 pub enum Principals {
     Principals(Vec<String>),

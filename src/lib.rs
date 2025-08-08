@@ -2,4 +2,5 @@
 
 pub mod binpack;
 pub mod model;
+pub mod statement_merger;
 pub mod validator;
