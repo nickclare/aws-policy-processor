@@ -8,8 +8,10 @@ pub struct Service {
     /// The list of actions that this service supports.
     pub actions: Vec<Action>,
     /// The service-level condition keys.
+    #[serde(default)]
     pub condition_keys: Vec<ConditionKey>,
     /// The resources supported by this service.
+    #[serde(default)]
     pub resources: Vec<Resource>,
     /// The version of this Service Reference file
     pub version: String,
