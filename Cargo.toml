@@ -1,4 +1,4 @@
 [workspace]
 resolver = "3"
-members = ["aws-policy-processor", "aws-service-references", "xtask"]
+members = ["aws-policy-processor", "aws-service-reference-types", "aws-service-references", "service-code-generator", "xtask"]
 
