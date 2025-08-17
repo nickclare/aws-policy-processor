@@ -206,7 +206,7 @@ fn fix_ident_name<S: AsRef<str>>(s: S) -> Ident {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use aws_service_references::*;
+    use aws_service_reference_types::*;
 
     #[test]
     fn test_gen_enum() {

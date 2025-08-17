@@ -417,7 +417,7 @@
     }
   }, {
     "Name" : "CreateDBInstance",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:BackupTarget", "rds:ManageMasterUserPassword", "rds:req-tag/${TagKey}" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:BackupTarget", "rds:ManageMasterUserPassword", "rds:PubliclyAccessible", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -445,7 +445,7 @@
     }
   }, {
     "Name" : "CreateDBInstanceReadReplica",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:PubliclyAccessible", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -542,7 +542,7 @@
     }
   }, {
     "Name" : "CreateDBShardGroup",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:PubliclyAccessible" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2836,7 +2836,7 @@
     }
   }, {
     "Name" : "RestoreDBInstanceFromDBSnapshot",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:BackupTarget", "rds:ManageMasterUserPassword", "rds:req-tag/${TagKey}" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:BackupTarget", "rds:ManageMasterUserPassword", "rds:PubliclyAccessible", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2864,7 +2864,7 @@
     }
   }, {
     "Name" : "RestoreDBInstanceFromS3",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:ManageMasterUserPassword", "rds:req-tag/${TagKey}" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:ManageMasterUserPassword", "rds:PubliclyAccessible", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2890,7 +2890,7 @@
     }
   }, {
     "Name" : "RestoreDBInstanceToPointInTime",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:BackupTarget", "rds:ManageMasterUserPassword", "rds:req-tag/${TagKey}" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:BackupTarget", "rds:ManageMasterUserPassword", "rds:PubliclyAccessible", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -3187,6 +3187,9 @@
   }, {
     "Name" : "rds:Piops",
     "Types" : [ "Numeric" ]
+  }, {
+    "Name" : "rds:PubliclyAccessible",
+    "Types" : [ "Bool" ]
   }, {
     "Name" : "rds:StorageEncrypted",
     "Types" : [ "Bool" ]
