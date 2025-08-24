@@ -6,10 +6,12 @@ use color_eyre::eyre::{self, OptionExt, WrapErr};
 use color_eyre::owo_colors::OwoColorize;
 use reqwest::blocking::Client;
 use serde::Deserialize;
+use service_code_generator::Generator;
 
 #[derive(clap::Parser)]
 enum Flags {
     SyncActions(SyncActions),
+    Generate(Generate),
 }
 
 /// Redownload and update the reference data files.
@@ -24,11 +26,23 @@ struct SyncActions {
     path: Option<PathBuf>,
 }
 
+#[derive(clap::Args, Debug)]
+struct Generate {
+    /// include verbose logging
+    #[arg(long, short)]
+    verbose: bool,
+
+    ///output path
+    #[arg(long, short)]
+    path: Option<PathBuf>,
+}
+
 fn main() -> eyre::Result<()> {
     color_eyre::install()?;
     let flags = Flags::parse();
     match flags {
         Flags::SyncActions(sync_actions) => sync_actions.run()?,
+        Flags::Generate(generate) => generate.run()?,
     }
 
     Ok(())
@@ -123,5 +137,24 @@ impl SyncActions {
             .error_for_status()?;
 
         Ok(resp.text()?)
+    }
+}
+
+impl Generate {
+    fn run(self) -> eyre::Result<()> {
+        // There will later be way more options, but for now just do the basic generation
+        let path = self.path.unwrap_or_else(|| {
+            PathBuf::new()
+                .join(env!("CARGO_MANIFEST_DIR"))
+                .parent()
+                .unwrap()
+                .join("aws-service-references")
+                .join("src")
+        });
+
+        let generator = Generator::new(path);
+        generator.execute()?;
+
+        Ok(())
     }
 }
