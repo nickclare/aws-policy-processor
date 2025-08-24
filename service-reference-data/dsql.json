@@ -155,6 +155,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "InjectError",
+    "ActionConditionKeys" : [ "dsql:FisActionId", "dsql:FisTargetArns" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListClusters",
     "Annotations" : {
       "Properties" : {
@@ -369,6 +387,12 @@
   }, {
     "Name" : "aws:TagKeys",
     "Types" : [ "ArrayOfString" ]
+  }, {
+    "Name" : "dsql:FisActionId",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "dsql:FisTargetArns",
+    "Types" : [ "ArrayOfARN" ]
   }, {
     "Name" : "dsql:WitnessRegion",
     "Types" : [ "String" ]
