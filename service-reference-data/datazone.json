@@ -71,6 +71,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "AssociateGovernedTerms",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "BatchDeleteLinkedTypes",
     "Annotations" : {
       "Properties" : {
@@ -908,6 +922,20 @@
     }
   }, {
     "Name" : "DisassociateEnvironmentRole",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DisassociateGovernedTerms",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,

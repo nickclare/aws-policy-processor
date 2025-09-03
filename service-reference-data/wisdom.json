@@ -47,9 +47,6 @@
         "IsWrite" : true
       }
     },
-    "Resources" : [ {
-      "Name" : "Assistant"
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -67,8 +64,6 @@
     },
     "Resources" : [ {
       "Name" : "AIAgent"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -85,9 +80,6 @@
         "IsWrite" : true
       }
     },
-    "Resources" : [ {
-      "Name" : "Assistant"
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -105,8 +97,6 @@
     },
     "Resources" : [ {
       "Name" : "AIGuardrail"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -123,9 +113,6 @@
         "IsWrite" : true
       }
     },
-    "Resources" : [ {
-      "Name" : "Assistant"
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -143,8 +130,6 @@
     },
     "Resources" : [ {
       "Name" : "AIPrompt"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -176,9 +161,6 @@
         "IsWrite" : true
       }
     },
-    "Resources" : [ {
-      "Name" : "Assistant"
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -353,8 +335,6 @@
     },
     "Resources" : [ {
       "Name" : "AIAgent"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -372,8 +352,6 @@
     },
     "Resources" : [ {
       "Name" : "AIAgent"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -391,8 +369,6 @@
     },
     "Resources" : [ {
       "Name" : "AIGuardrail"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -410,8 +386,6 @@
     },
     "Resources" : [ {
       "Name" : "AIGuardrail"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -429,8 +403,6 @@
     },
     "Resources" : [ {
       "Name" : "AIPrompt"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -448,8 +420,6 @@
     },
     "Resources" : [ {
       "Name" : "AIPrompt"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -483,8 +453,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Assistant"
-    }, {
       "Name" : "AssistantAssociation"
     } ],
     "SupportedBy" : {
@@ -634,8 +602,6 @@
     },
     "Resources" : [ {
       "Name" : "AIAgent"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -653,8 +619,6 @@
     },
     "Resources" : [ {
       "Name" : "AIGuardrail"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -672,8 +636,6 @@
     },
     "Resources" : [ {
       "Name" : "AIPrompt"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -707,8 +669,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Assistant"
-    }, {
       "Name" : "AssistantAssociation"
     } ],
     "SupportedBy" : {
@@ -839,8 +799,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Assistant"
-    }, {
       "Name" : "Session"
     } ],
     "SupportedBy" : {
@@ -877,7 +835,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Assistant"
+      "Name" : "Session"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -894,8 +852,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Assistant"
-    }, {
       "Name" : "Session"
     } ],
     "SupportedBy" : {
@@ -914,8 +870,6 @@
     },
     "Resources" : [ {
       "Name" : "AIAgent"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -931,9 +885,6 @@
         "IsWrite" : false
       }
     },
-    "Resources" : [ {
-      "Name" : "Assistant"
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -950,8 +901,6 @@
     },
     "Resources" : [ {
       "Name" : "AIGuardrail"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -967,9 +916,6 @@
         "IsWrite" : false
       }
     },
-    "Resources" : [ {
-      "Name" : "Assistant"
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -986,8 +932,6 @@
     },
     "Resources" : [ {
       "Name" : "AIPrompt"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1003,9 +947,6 @@
         "IsWrite" : false
       }
     },
-    "Resources" : [ {
-      "Name" : "Assistant"
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -1152,8 +1093,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Assistant"
-    }, {
       "Name" : "Session"
     } ],
     "SupportedBy" : {
@@ -1201,6 +1140,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "Session"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -1371,8 +1313,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Assistant"
-    }, {
       "Name" : "Session"
     } ],
     "SupportedBy" : {
@@ -1490,8 +1430,6 @@
     },
     "Resources" : [ {
       "Name" : "AIAgent"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1509,8 +1447,6 @@
     },
     "Resources" : [ {
       "Name" : "AIGuardrail"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1528,8 +1464,6 @@
     },
     "Resources" : [ {
       "Name" : "AIPrompt"
-    }, {
-      "Name" : "Assistant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1656,8 +1590,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Assistant"
-    }, {
       "Name" : "Session"
     } ],
     "SupportedBy" : {
@@ -1675,8 +1607,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Assistant"
-    }, {
       "Name" : "Session"
     } ],
     "SupportedBy" : {

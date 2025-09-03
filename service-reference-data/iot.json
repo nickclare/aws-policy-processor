@@ -1809,6 +1809,20 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DescribeEncryptionConfiguration",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
     "Name" : "DescribeEndpoint",
     "Annotations" : {
       "Properties" : {
@@ -4550,6 +4564,20 @@
     "Resources" : [ {
       "Name" : "dynamicthinggroup"
     } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "UpdateEncryptionConfiguration",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true

@@ -1,0 +1,225 @@
+// NOTE: This code is automatically generated - do not update it manually
+
+#[derive(Debug, Clone, Copy, std :: cmp :: PartialEq, std :: cmp :: Eq, std :: hash :: Hash)]
+pub enum A4bActions {
+    ApproveSkill,
+    AssociateContactWithAddressBook,
+    AssociateDeviceWithNetworkProfile,
+    AssociateDeviceWithRoom,
+    AssociateSkillGroupWithRoom,
+    AssociateSkillWithSkillGroup,
+    AssociateSkillWithUsers,
+    CompleteRegistration,
+    CreateAddressBook,
+    CreateBusinessReportSchedule,
+    CreateConferenceProvider,
+    CreateContact,
+    CreateGatewayGroup,
+    CreateNetworkProfile,
+    CreateProfile,
+    CreateRoom,
+    CreateSkillGroup,
+    CreateUser,
+    DeleteAddressBook,
+    DeleteBusinessReportSchedule,
+    DeleteConferenceProvider,
+    DeleteContact,
+    DeleteDevice,
+    DeleteDeviceUsageData,
+    DeleteGatewayGroup,
+    DeleteNetworkProfile,
+    DeleteProfile,
+    DeleteRoom,
+    DeleteRoomSkillParameter,
+    DeleteSkillAuthorization,
+    DeleteSkillGroup,
+    DeleteUser,
+    DisassociateContactFromAddressBook,
+    DisassociateDeviceFromRoom,
+    DisassociateSkillFromSkillGroup,
+    DisassociateSkillFromUsers,
+    DisassociateSkillGroupFromRoom,
+    ForgetSmartHomeAppliances,
+    GetAddressBook,
+    GetConferencePreference,
+    GetConferenceProvider,
+    GetContact,
+    GetDevice,
+    GetGateway,
+    GetGatewayGroup,
+    GetInvitationConfiguration,
+    GetNetworkProfile,
+    GetProfile,
+    GetRoom,
+    GetRoomSkillParameter,
+    GetSkillGroup,
+    ListBusinessReportSchedules,
+    ListConferenceProviders,
+    ListDeviceEvents,
+    ListGatewayGroups,
+    ListGateways,
+    ListSkills,
+    ListSkillsStoreCategories,
+    ListSkillsStoreSkillsByCategory,
+    ListSmartHomeAppliances,
+    ListTags,
+    PutConferencePreference,
+    PutDeviceSetupEvents,
+    PutInvitationConfiguration,
+    PutRoomSkillParameter,
+    PutSkillAuthorization,
+    RegisterAvsDevice,
+    RegisterDevice,
+    RejectSkill,
+    ResolveRoom,
+    RevokeInvitation,
+    SearchAddressBooks,
+    SearchContacts,
+    SearchDevices,
+    SearchNetworkProfiles,
+    SearchProfiles,
+    SearchRooms,
+    SearchSkillGroups,
+    SearchUsers,
+    SendAnnouncement,
+    SendInvitation,
+    StartDeviceSync,
+    StartSmartHomeApplianceDiscovery,
+    TagResource,
+    UntagResource,
+    UpdateAddressBook,
+    UpdateBusinessReportSchedule,
+    UpdateConferenceProvider,
+    UpdateContact,
+    UpdateDevice,
+    UpdateGateway,
+    UpdateGatewayGroup,
+    UpdateNetworkProfile,
+    UpdateProfile,
+    UpdateRoom,
+    UpdateSkillGroup,
+}
+impl std::fmt::Display for A4bActions {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            A4bActions::ApproveSkill => write!(f, "a4b:ApproveSkill"),
+            A4bActions::AssociateContactWithAddressBook => {
+                write!(f, "a4b:AssociateContactWithAddressBook")
+            }
+            A4bActions::AssociateDeviceWithNetworkProfile => {
+                write!(f, "a4b:AssociateDeviceWithNetworkProfile")
+            }
+            A4bActions::AssociateDeviceWithRoom => write!(f, "a4b:AssociateDeviceWithRoom"),
+            A4bActions::AssociateSkillGroupWithRoom => write!(f, "a4b:AssociateSkillGroupWithRoom"),
+            A4bActions::AssociateSkillWithSkillGroup => {
+                write!(f, "a4b:AssociateSkillWithSkillGroup")
+            }
+            A4bActions::AssociateSkillWithUsers => write!(f, "a4b:AssociateSkillWithUsers"),
+            A4bActions::CompleteRegistration => write!(f, "a4b:CompleteRegistration"),
+            A4bActions::CreateAddressBook => write!(f, "a4b:CreateAddressBook"),
+            A4bActions::CreateBusinessReportSchedule => {
+                write!(f, "a4b:CreateBusinessReportSchedule")
+            }
+            A4bActions::CreateConferenceProvider => write!(f, "a4b:CreateConferenceProvider"),
+            A4bActions::CreateContact => write!(f, "a4b:CreateContact"),
+            A4bActions::CreateGatewayGroup => write!(f, "a4b:CreateGatewayGroup"),
+            A4bActions::CreateNetworkProfile => write!(f, "a4b:CreateNetworkProfile"),
+            A4bActions::CreateProfile => write!(f, "a4b:CreateProfile"),
+            A4bActions::CreateRoom => write!(f, "a4b:CreateRoom"),
+            A4bActions::CreateSkillGroup => write!(f, "a4b:CreateSkillGroup"),
+            A4bActions::CreateUser => write!(f, "a4b:CreateUser"),
+            A4bActions::DeleteAddressBook => write!(f, "a4b:DeleteAddressBook"),
+            A4bActions::DeleteBusinessReportSchedule => {
+                write!(f, "a4b:DeleteBusinessReportSchedule")
+            }
+            A4bActions::DeleteConferenceProvider => write!(f, "a4b:DeleteConferenceProvider"),
+            A4bActions::DeleteContact => write!(f, "a4b:DeleteContact"),
+            A4bActions::DeleteDevice => write!(f, "a4b:DeleteDevice"),
+            A4bActions::DeleteDeviceUsageData => write!(f, "a4b:DeleteDeviceUsageData"),
+            A4bActions::DeleteGatewayGroup => write!(f, "a4b:DeleteGatewayGroup"),
+            A4bActions::DeleteNetworkProfile => write!(f, "a4b:DeleteNetworkProfile"),
+            A4bActions::DeleteProfile => write!(f, "a4b:DeleteProfile"),
+            A4bActions::DeleteRoom => write!(f, "a4b:DeleteRoom"),
+            A4bActions::DeleteRoomSkillParameter => write!(f, "a4b:DeleteRoomSkillParameter"),
+            A4bActions::DeleteSkillAuthorization => write!(f, "a4b:DeleteSkillAuthorization"),
+            A4bActions::DeleteSkillGroup => write!(f, "a4b:DeleteSkillGroup"),
+            A4bActions::DeleteUser => write!(f, "a4b:DeleteUser"),
+            A4bActions::DisassociateContactFromAddressBook => {
+                write!(f, "a4b:DisassociateContactFromAddressBook")
+            }
+            A4bActions::DisassociateDeviceFromRoom => write!(f, "a4b:DisassociateDeviceFromRoom"),
+            A4bActions::DisassociateSkillFromSkillGroup => {
+                write!(f, "a4b:DisassociateSkillFromSkillGroup")
+            }
+            A4bActions::DisassociateSkillFromUsers => write!(f, "a4b:DisassociateSkillFromUsers"),
+            A4bActions::DisassociateSkillGroupFromRoom => {
+                write!(f, "a4b:DisassociateSkillGroupFromRoom")
+            }
+            A4bActions::ForgetSmartHomeAppliances => write!(f, "a4b:ForgetSmartHomeAppliances"),
+            A4bActions::GetAddressBook => write!(f, "a4b:GetAddressBook"),
+            A4bActions::GetConferencePreference => write!(f, "a4b:GetConferencePreference"),
+            A4bActions::GetConferenceProvider => write!(f, "a4b:GetConferenceProvider"),
+            A4bActions::GetContact => write!(f, "a4b:GetContact"),
+            A4bActions::GetDevice => write!(f, "a4b:GetDevice"),
+            A4bActions::GetGateway => write!(f, "a4b:GetGateway"),
+            A4bActions::GetGatewayGroup => write!(f, "a4b:GetGatewayGroup"),
+            A4bActions::GetInvitationConfiguration => write!(f, "a4b:GetInvitationConfiguration"),
+            A4bActions::GetNetworkProfile => write!(f, "a4b:GetNetworkProfile"),
+            A4bActions::GetProfile => write!(f, "a4b:GetProfile"),
+            A4bActions::GetRoom => write!(f, "a4b:GetRoom"),
+            A4bActions::GetRoomSkillParameter => write!(f, "a4b:GetRoomSkillParameter"),
+            A4bActions::GetSkillGroup => write!(f, "a4b:GetSkillGroup"),
+            A4bActions::ListBusinessReportSchedules => write!(f, "a4b:ListBusinessReportSchedules"),
+            A4bActions::ListConferenceProviders => write!(f, "a4b:ListConferenceProviders"),
+            A4bActions::ListDeviceEvents => write!(f, "a4b:ListDeviceEvents"),
+            A4bActions::ListGatewayGroups => write!(f, "a4b:ListGatewayGroups"),
+            A4bActions::ListGateways => write!(f, "a4b:ListGateways"),
+            A4bActions::ListSkills => write!(f, "a4b:ListSkills"),
+            A4bActions::ListSkillsStoreCategories => write!(f, "a4b:ListSkillsStoreCategories"),
+            A4bActions::ListSkillsStoreSkillsByCategory => {
+                write!(f, "a4b:ListSkillsStoreSkillsByCategory")
+            }
+            A4bActions::ListSmartHomeAppliances => write!(f, "a4b:ListSmartHomeAppliances"),
+            A4bActions::ListTags => write!(f, "a4b:ListTags"),
+            A4bActions::PutConferencePreference => write!(f, "a4b:PutConferencePreference"),
+            A4bActions::PutDeviceSetupEvents => write!(f, "a4b:PutDeviceSetupEvents"),
+            A4bActions::PutInvitationConfiguration => write!(f, "a4b:PutInvitationConfiguration"),
+            A4bActions::PutRoomSkillParameter => write!(f, "a4b:PutRoomSkillParameter"),
+            A4bActions::PutSkillAuthorization => write!(f, "a4b:PutSkillAuthorization"),
+            A4bActions::RegisterAvsDevice => write!(f, "a4b:RegisterAVSDevice"),
+            A4bActions::RegisterDevice => write!(f, "a4b:RegisterDevice"),
+            A4bActions::RejectSkill => write!(f, "a4b:RejectSkill"),
+            A4bActions::ResolveRoom => write!(f, "a4b:ResolveRoom"),
+            A4bActions::RevokeInvitation => write!(f, "a4b:RevokeInvitation"),
+            A4bActions::SearchAddressBooks => write!(f, "a4b:SearchAddressBooks"),
+            A4bActions::SearchContacts => write!(f, "a4b:SearchContacts"),
+            A4bActions::SearchDevices => write!(f, "a4b:SearchDevices"),
+            A4bActions::SearchNetworkProfiles => write!(f, "a4b:SearchNetworkProfiles"),
+            A4bActions::SearchProfiles => write!(f, "a4b:SearchProfiles"),
+            A4bActions::SearchRooms => write!(f, "a4b:SearchRooms"),
+            A4bActions::SearchSkillGroups => write!(f, "a4b:SearchSkillGroups"),
+            A4bActions::SearchUsers => write!(f, "a4b:SearchUsers"),
+            A4bActions::SendAnnouncement => write!(f, "a4b:SendAnnouncement"),
+            A4bActions::SendInvitation => write!(f, "a4b:SendInvitation"),
+            A4bActions::StartDeviceSync => write!(f, "a4b:StartDeviceSync"),
+            A4bActions::StartSmartHomeApplianceDiscovery => {
+                write!(f, "a4b:StartSmartHomeApplianceDiscovery")
+            }
+            A4bActions::TagResource => write!(f, "a4b:TagResource"),
+            A4bActions::UntagResource => write!(f, "a4b:UntagResource"),
+            A4bActions::UpdateAddressBook => write!(f, "a4b:UpdateAddressBook"),
+            A4bActions::UpdateBusinessReportSchedule => {
+                write!(f, "a4b:UpdateBusinessReportSchedule")
+            }
+            A4bActions::UpdateConferenceProvider => write!(f, "a4b:UpdateConferenceProvider"),
+            A4bActions::UpdateContact => write!(f, "a4b:UpdateContact"),
+            A4bActions::UpdateDevice => write!(f, "a4b:UpdateDevice"),
+            A4bActions::UpdateGateway => write!(f, "a4b:UpdateGateway"),
+            A4bActions::UpdateGatewayGroup => write!(f, "a4b:UpdateGatewayGroup"),
+            A4bActions::UpdateNetworkProfile => write!(f, "a4b:UpdateNetworkProfile"),
+            A4bActions::UpdateProfile => write!(f, "a4b:UpdateProfile"),
+            A4bActions::UpdateRoom => write!(f, "a4b:UpdateRoom"),
+            A4bActions::UpdateSkillGroup => write!(f, "a4b:UpdateSkillGroup"),
+        }
+    }
+}
