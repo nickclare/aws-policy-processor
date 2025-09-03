@@ -7,20 +7,26 @@ pub enum SsmSapActions {
     DeregisterApplication,
     GetApplication,
     GetComponent,
+    GetConfigurationCheckOperation,
     GetDatabase,
     GetOperation,
     GetResourcePermission,
     ListApplications,
     ListComponents,
+    ListConfigurationCheckDefinitions,
+    ListConfigurationCheckOperations,
     ListDatabases,
     ListOperationEvents,
     ListOperations,
+    ListSubCheckResults,
+    ListSubCheckRuleResults,
     ListTagsForResource,
     PutResourcePermission,
     RegisterApplication,
     RestoreDatabase,
     StartApplication,
     StartApplicationRefresh,
+    StartConfigurationChecks,
     StopApplication,
     TagResource,
     UntagResource,
@@ -37,20 +43,34 @@ impl std::fmt::Display for SsmSapActions {
             SsmSapActions::DeregisterApplication => write!(f, "ssm-sap:DeregisterApplication"),
             SsmSapActions::GetApplication => write!(f, "ssm-sap:GetApplication"),
             SsmSapActions::GetComponent => write!(f, "ssm-sap:GetComponent"),
+            SsmSapActions::GetConfigurationCheckOperation => {
+                write!(f, "ssm-sap:GetConfigurationCheckOperation")
+            }
             SsmSapActions::GetDatabase => write!(f, "ssm-sap:GetDatabase"),
             SsmSapActions::GetOperation => write!(f, "ssm-sap:GetOperation"),
             SsmSapActions::GetResourcePermission => write!(f, "ssm-sap:GetResourcePermission"),
             SsmSapActions::ListApplications => write!(f, "ssm-sap:ListApplications"),
             SsmSapActions::ListComponents => write!(f, "ssm-sap:ListComponents"),
+            SsmSapActions::ListConfigurationCheckDefinitions => {
+                write!(f, "ssm-sap:ListConfigurationCheckDefinitions")
+            }
+            SsmSapActions::ListConfigurationCheckOperations => {
+                write!(f, "ssm-sap:ListConfigurationCheckOperations")
+            }
             SsmSapActions::ListDatabases => write!(f, "ssm-sap:ListDatabases"),
             SsmSapActions::ListOperationEvents => write!(f, "ssm-sap:ListOperationEvents"),
             SsmSapActions::ListOperations => write!(f, "ssm-sap:ListOperations"),
+            SsmSapActions::ListSubCheckResults => write!(f, "ssm-sap:ListSubCheckResults"),
+            SsmSapActions::ListSubCheckRuleResults => write!(f, "ssm-sap:ListSubCheckRuleResults"),
             SsmSapActions::ListTagsForResource => write!(f, "ssm-sap:ListTagsForResource"),
             SsmSapActions::PutResourcePermission => write!(f, "ssm-sap:PutResourcePermission"),
             SsmSapActions::RegisterApplication => write!(f, "ssm-sap:RegisterApplication"),
             SsmSapActions::RestoreDatabase => write!(f, "ssm-sap:RestoreDatabase"),
             SsmSapActions::StartApplication => write!(f, "ssm-sap:StartApplication"),
             SsmSapActions::StartApplicationRefresh => write!(f, "ssm-sap:StartApplicationRefresh"),
+            SsmSapActions::StartConfigurationChecks => {
+                write!(f, "ssm-sap:StartConfigurationChecks")
+            }
             SsmSapActions::StopApplication => write!(f, "ssm-sap:StopApplication"),
             SsmSapActions::TagResource => write!(f, "ssm-sap:TagResource"),
             SsmSapActions::UntagResource => write!(f, "ssm-sap:UntagResource"),

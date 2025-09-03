@@ -9,6 +9,7 @@ pub enum AiopsActions {
     DeleteInvestigation,
     DeleteInvestigationGroup,
     DeleteInvestigationGroupPolicy,
+    GetEphemeralInvestigationResults,
     GetInvestigation,
     GetInvestigationEvent,
     GetInvestigationGroup,
@@ -39,6 +40,9 @@ impl std::fmt::Display for AiopsActions {
             AiopsActions::DeleteInvestigationGroup => write!(f, "aiops:DeleteInvestigationGroup"),
             AiopsActions::DeleteInvestigationGroupPolicy => {
                 write!(f, "aiops:DeleteInvestigationGroupPolicy")
+            }
+            AiopsActions::GetEphemeralInvestigationResults => {
+                write!(f, "aiops:GetEphemeralInvestigationResults")
             }
             AiopsActions::GetInvestigation => write!(f, "aiops:GetInvestigation"),
             AiopsActions::GetInvestigationEvent => write!(f, "aiops:GetInvestigationEvent"),
