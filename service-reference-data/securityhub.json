@@ -131,7 +131,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "BatchGetSecurityControls",
@@ -701,7 +701,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DisableImportFindingsForProduct",
@@ -903,7 +903,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetAdministratorAccount",
@@ -1019,7 +1019,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetEnabledStandards",
@@ -1106,7 +1106,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetFreeTrialUsage",
@@ -1123,7 +1123,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetInsightFindingTrend",
@@ -1140,7 +1140,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetInsightResults",
@@ -1290,7 +1290,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "InviteMembers",
@@ -1408,7 +1408,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListEnabledProductsForImport",
@@ -1556,7 +1556,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "SendInsightEvents",
@@ -1573,7 +1573,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "StartConfigurationPolicyAssociation",
@@ -1866,7 +1866,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   } ],
   "ConditionKeys" : [ {

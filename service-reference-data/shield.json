@@ -187,7 +187,7 @@
       "Name" : "protection-group"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false
     }
   }, {
@@ -395,7 +395,7 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false
     }
   }, {
@@ -440,7 +440,7 @@
       "Name" : "attack"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false
     }
   }, {

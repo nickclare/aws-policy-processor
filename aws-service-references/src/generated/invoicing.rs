@@ -5,13 +5,16 @@ pub enum InvoicingActions {
     BatchGetInvoiceProfile,
     CreateInvoiceUnit,
     DeleteInvoiceUnit,
+    GetInvoiceCorrection,
     GetInvoiceEmailDeliveryPreferences,
     GetInvoicePdf,
     GetInvoiceUnit,
+    ListInvoiceCorrections,
     ListInvoiceSummaries,
     ListInvoiceUnits,
     ListTagsForResource,
     PutInvoiceEmailDeliveryPreferences,
+    StartInvoiceCorrection,
     TagResource,
     UntagResource,
     UpdateInvoiceUnit,
@@ -24,16 +27,23 @@ impl std::fmt::Display for InvoicingActions {
             }
             InvoicingActions::CreateInvoiceUnit => write!(f, "invoicing:CreateInvoiceUnit"),
             InvoicingActions::DeleteInvoiceUnit => write!(f, "invoicing:DeleteInvoiceUnit"),
+            InvoicingActions::GetInvoiceCorrection => write!(f, "invoicing:GetInvoiceCorrection"),
             InvoicingActions::GetInvoiceEmailDeliveryPreferences => {
                 write!(f, "invoicing:GetInvoiceEmailDeliveryPreferences")
             }
             InvoicingActions::GetInvoicePdf => write!(f, "invoicing:GetInvoicePDF"),
             InvoicingActions::GetInvoiceUnit => write!(f, "invoicing:GetInvoiceUnit"),
+            InvoicingActions::ListInvoiceCorrections => {
+                write!(f, "invoicing:ListInvoiceCorrections")
+            }
             InvoicingActions::ListInvoiceSummaries => write!(f, "invoicing:ListInvoiceSummaries"),
             InvoicingActions::ListInvoiceUnits => write!(f, "invoicing:ListInvoiceUnits"),
             InvoicingActions::ListTagsForResource => write!(f, "invoicing:ListTagsForResource"),
             InvoicingActions::PutInvoiceEmailDeliveryPreferences => {
                 write!(f, "invoicing:PutInvoiceEmailDeliveryPreferences")
+            }
+            InvoicingActions::StartInvoiceCorrection => {
+                write!(f, "invoicing:StartInvoiceCorrection")
             }
             InvoicingActions::TagResource => write!(f, "invoicing:TagResource"),
             InvoicingActions::UntagResource => write!(f, "invoicing:UntagResource"),

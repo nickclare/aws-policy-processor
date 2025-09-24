@@ -33,7 +33,9 @@ pub enum NeptuneGraphActions {
     ResetGraph,
     RestoreGraphFromSnapshot,
     StartExportTask,
+    StartGraph,
     StartImportTask,
+    StopGraph,
     TagResource,
     UntagResource,
     UpdateGraph,
@@ -97,7 +99,9 @@ impl std::fmt::Display for NeptuneGraphActions {
                 write!(f, "neptune-graph:RestoreGraphFromSnapshot")
             }
             NeptuneGraphActions::StartExportTask => write!(f, "neptune-graph:StartExportTask"),
+            NeptuneGraphActions::StartGraph => write!(f, "neptune-graph:StartGraph"),
             NeptuneGraphActions::StartImportTask => write!(f, "neptune-graph:StartImportTask"),
+            NeptuneGraphActions::StopGraph => write!(f, "neptune-graph:StopGraph"),
             NeptuneGraphActions::TagResource => write!(f, "neptune-graph:TagResource"),
             NeptuneGraphActions::UntagResource => write!(f, "neptune-graph:UntagResource"),
             NeptuneGraphActions::UpdateGraph => write!(f, "neptune-graph:UpdateGraph"),

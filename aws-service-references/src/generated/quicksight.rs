@@ -34,6 +34,7 @@ pub enum QuicksightActions {
     CreateTopicRefreshSchedule,
     CreateUser,
     CreateVpcConnection,
+    DeleteAccountCustomPermission,
     DeleteAccountCustomization,
     DeleteAccountSubscription,
     DeleteAnalysis,
@@ -66,6 +67,7 @@ pub enum QuicksightActions {
     DeleteUserByPrincipalId,
     DeleteUserCustomPermission,
     DeleteVpcConnection,
+    DescribeAccountCustomPermission,
     DescribeAccountCustomization,
     DescribeAccountSettings,
     DescribeAccountSubscription,
@@ -186,6 +188,7 @@ pub enum QuicksightActions {
     TagResource,
     Unsubscribe,
     UntagResource,
+    UpdateAccountCustomPermission,
     UpdateAccountCustomization,
     UpdateAccountSettings,
     UpdateAnalysis,
@@ -292,6 +295,9 @@ impl std::fmt::Display for QuicksightActions {
             }
             QuicksightActions::CreateUser => write!(f, "quicksight:CreateUser"),
             QuicksightActions::CreateVpcConnection => write!(f, "quicksight:CreateVPCConnection"),
+            QuicksightActions::DeleteAccountCustomPermission => {
+                write!(f, "quicksight:DeleteAccountCustomPermission")
+            }
             QuicksightActions::DeleteAccountCustomization => {
                 write!(f, "quicksight:DeleteAccountCustomization")
             }
@@ -356,6 +362,9 @@ impl std::fmt::Display for QuicksightActions {
                 write!(f, "quicksight:DeleteUserCustomPermission")
             }
             QuicksightActions::DeleteVpcConnection => write!(f, "quicksight:DeleteVPCConnection"),
+            QuicksightActions::DescribeAccountCustomPermission => {
+                write!(f, "quicksight:DescribeAccountCustomPermission")
+            }
             QuicksightActions::DescribeAccountCustomization => {
                 write!(f, "quicksight:DescribeAccountCustomization")
             }
@@ -591,6 +600,9 @@ impl std::fmt::Display for QuicksightActions {
             QuicksightActions::TagResource => write!(f, "quicksight:TagResource"),
             QuicksightActions::Unsubscribe => write!(f, "quicksight:Unsubscribe"),
             QuicksightActions::UntagResource => write!(f, "quicksight:UntagResource"),
+            QuicksightActions::UpdateAccountCustomPermission => {
+                write!(f, "quicksight:UpdateAccountCustomPermission")
+            }
             QuicksightActions::UpdateAccountCustomization => {
                 write!(f, "quicksight:UpdateAccountCustomization")
             }

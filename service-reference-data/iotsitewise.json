@@ -247,8 +247,8 @@
       "Name" : "asset-model"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateDashboard",
@@ -430,8 +430,8 @@
       "Name" : "computation-model"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteDashboard",
@@ -655,8 +655,8 @@
       "Name" : "asset-model"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeAssetProperty",
@@ -703,8 +703,8 @@
       "Name" : "computation-model"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeComputationModelExecutionSummary",
@@ -722,8 +722,8 @@
       "Name" : "computation-model"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeDashboard",
@@ -784,8 +784,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeGateway",
@@ -1277,8 +1277,8 @@
       "Name" : "asset-model"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListComputationModelResolveToResources",
@@ -1294,8 +1294,8 @@
       "Name" : "computation-model"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListComputationModels",
@@ -1308,8 +1308,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListDashboards",
@@ -1358,8 +1358,8 @@
       "Name" : "computation-model"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListGateways",
@@ -1389,8 +1389,8 @@
       "Name" : "asset-model"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListPortals",
@@ -1744,8 +1744,8 @@
       "Name" : "computation-model"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "UpdateDashboard",

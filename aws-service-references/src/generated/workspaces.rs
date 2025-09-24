@@ -45,7 +45,6 @@ pub enum WorkspacesActions {
     DescribeCustomWorkspaceImageImport,
     DescribeImageAssociations,
     DescribeIpGroups,
-    DescribeRootClientCertificates,
     DescribeTags,
     DescribeWorkspaceAssociations,
     DescribeWorkspaceBundles,
@@ -202,9 +201,6 @@ impl std::fmt::Display for WorkspacesActions {
                 write!(f, "workspaces:DescribeImageAssociations")
             }
             WorkspacesActions::DescribeIpGroups => write!(f, "workspaces:DescribeIpGroups"),
-            WorkspacesActions::DescribeRootClientCertificates => {
-                write!(f, "workspaces:DescribeRootClientCertificates")
-            }
             WorkspacesActions::DescribeTags => write!(f, "workspaces:DescribeTags"),
             WorkspacesActions::DescribeWorkspaceAssociations => {
                 write!(f, "workspaces:DescribeWorkspaceAssociations")

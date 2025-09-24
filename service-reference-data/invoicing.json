@@ -48,6 +48,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetInvoiceCorrection",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetInvoiceEmailDeliveryPreferences",
     "Annotations" : {
       "Properties" : {
@@ -88,6 +102,20 @@
     "Resources" : [ {
       "Name" : "invoice-unit"
     } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListInvoiceCorrections",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -140,6 +168,20 @@
     }
   }, {
     "Name" : "PutInvoiceEmailDeliveryPreferences",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StartInvoiceCorrection",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,

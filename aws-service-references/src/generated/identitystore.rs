@@ -4,9 +4,11 @@
 pub enum IdentitystoreActions {
     CreateGroup,
     CreateGroupMembership,
+    CreateIdentityStore,
     CreateUser,
     DeleteGroup,
     DeleteGroupMembership,
+    DeleteIdentityStore,
     DeleteUser,
     DescribeGroup,
     DescribeGroupMembership,
@@ -20,6 +22,7 @@ pub enum IdentitystoreActions {
     ListGroups,
     ListUsers,
     UpdateGroup,
+    UpdateIdentityStore,
     UpdateUser,
 }
 impl std::fmt::Display for IdentitystoreActions {
@@ -29,10 +32,16 @@ impl std::fmt::Display for IdentitystoreActions {
             IdentitystoreActions::CreateGroupMembership => {
                 write!(f, "identitystore:CreateGroupMembership")
             }
+            IdentitystoreActions::CreateIdentityStore => {
+                write!(f, "identitystore:CreateIdentityStore")
+            }
             IdentitystoreActions::CreateUser => write!(f, "identitystore:CreateUser"),
             IdentitystoreActions::DeleteGroup => write!(f, "identitystore:DeleteGroup"),
             IdentitystoreActions::DeleteGroupMembership => {
                 write!(f, "identitystore:DeleteGroupMembership")
+            }
+            IdentitystoreActions::DeleteIdentityStore => {
+                write!(f, "identitystore:DeleteIdentityStore")
             }
             IdentitystoreActions::DeleteUser => write!(f, "identitystore:DeleteUser"),
             IdentitystoreActions::DescribeGroup => write!(f, "identitystore:DescribeGroup"),
@@ -55,6 +64,9 @@ impl std::fmt::Display for IdentitystoreActions {
             IdentitystoreActions::ListGroups => write!(f, "identitystore:ListGroups"),
             IdentitystoreActions::ListUsers => write!(f, "identitystore:ListUsers"),
             IdentitystoreActions::UpdateGroup => write!(f, "identitystore:UpdateGroup"),
+            IdentitystoreActions::UpdateIdentityStore => {
+                write!(f, "identitystore:UpdateIdentityStore")
+            }
             IdentitystoreActions::UpdateUser => write!(f, "identitystore:UpdateUser"),
         }
     }

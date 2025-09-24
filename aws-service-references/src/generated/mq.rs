@@ -25,6 +25,7 @@ pub enum MqActions {
     Promote,
     RebootBroker,
     UpdateBroker,
+    UpdateBrokerAccessConfiguration,
     UpdateConfiguration,
     UpdateUser,
 }
@@ -58,6 +59,9 @@ impl std::fmt::Display for MqActions {
             MqActions::Promote => write!(f, "mq:Promote"),
             MqActions::RebootBroker => write!(f, "mq:RebootBroker"),
             MqActions::UpdateBroker => write!(f, "mq:UpdateBroker"),
+            MqActions::UpdateBrokerAccessConfiguration => {
+                write!(f, "mq:UpdateBrokerAccessConfiguration")
+            }
             MqActions::UpdateConfiguration => write!(f, "mq:UpdateConfiguration"),
             MqActions::UpdateUser => write!(f, "mq:UpdateUser"),
         }

@@ -136,6 +136,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CountTokens",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "foundation-model"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateAgent",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -188,7 +205,7 @@
     }
   }, {
     "Name" : "CreateAutomatedReasoningPolicy",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:BearerTokenType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -220,7 +237,7 @@
     }
   }, {
     "Name" : "CreateAutomatedReasoningPolicyVersion",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:BearerTokenType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -270,7 +287,7 @@
     }
   }, {
     "Name" : "CreateCustomModel",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:BearerTokenType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -285,7 +302,7 @@
     }
   }, {
     "Name" : "CreateCustomModelDeployment",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:BearerTokenType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -338,7 +355,7 @@
     }
   }, {
     "Name" : "CreateEvaluationJob",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:BearerTokenType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -426,7 +443,7 @@
     }
   }, {
     "Name" : "CreateGuardrail",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:BearerTokenType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -533,7 +550,7 @@
     }
   }, {
     "Name" : "CreateModelCopyJob",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:BearerTokenType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -551,7 +568,7 @@
     }
   }, {
     "Name" : "CreateModelCustomizationJob",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:BearerTokenType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -571,7 +588,7 @@
     }
   }, {
     "Name" : "CreateModelEvaluationJob",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:BearerTokenType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -591,7 +608,7 @@
     }
   }, {
     "Name" : "CreateModelImportJob",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:BearerTokenType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -606,7 +623,7 @@
     }
   }, {
     "Name" : "CreateModelInvocationJob",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:BearerTokenType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -643,7 +660,7 @@
     }
   }, {
     "Name" : "CreatePromptRouter",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:BearerTokenType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -683,7 +700,7 @@
     }
   }, {
     "Name" : "CreateProvisionedModelThroughput",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:BearerTokenType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2337,7 +2354,7 @@
     }
   }, {
     "Name" : "InvokeModel",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:GuardrailIdentifier", "bedrock:InferenceProfileArn", "bedrock:PromptRouterArn" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:BearerTokenType", "bedrock:GuardrailIdentifier", "bedrock:InferenceProfileArn", "bedrock:PromptRouterArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2373,7 +2390,7 @@
     }
   }, {
     "Name" : "InvokeModelWithResponseStream",
-    "ActionConditionKeys" : [ "bedrock:GuardrailIdentifier", "bedrock:InferenceProfileArn", "bedrock:PromptRouterArn" ],
+    "ActionConditionKeys" : [ "bedrock:BearerTokenType", "bedrock:GuardrailIdentifier", "bedrock:InferenceProfileArn", "bedrock:PromptRouterArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -3501,7 +3518,7 @@
     }
   }, {
     "Name" : "TagResource",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:BearerTokenType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -3571,7 +3588,7 @@
     }
   }, {
     "Name" : "UntagResource",
-    "ActionConditionKeys" : [ "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:TagKeys", "bedrock:BearerTokenType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -4000,6 +4017,9 @@
   }, {
     "Name" : "aws:TagKeys",
     "Types" : [ "ArrayOfString" ]
+  }, {
+    "Name" : "bedrock:BearerTokenType",
+    "Types" : [ "String" ]
   }, {
     "Name" : "bedrock:GuardrailIdentifier",
     "Types" : [ "ARN" ]

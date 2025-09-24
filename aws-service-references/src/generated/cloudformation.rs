@@ -57,6 +57,7 @@ pub enum CloudformationActions {
     GetTemplate,
     GetTemplateSummary,
     ImportStacksToStackSet,
+    ListAllHookResults,
     ListChangeSets,
     ListExports,
     ListGeneratedTemplates,
@@ -231,6 +232,9 @@ impl std::fmt::Display for CloudformationActions {
             }
             CloudformationActions::ImportStacksToStackSet => {
                 write!(f, "cloudformation:ImportStacksToStackSet")
+            }
+            CloudformationActions::ListAllHookResults => {
+                write!(f, "cloudformation:ListAllHookResults")
             }
             CloudformationActions::ListChangeSets => write!(f, "cloudformation:ListChangeSets"),
             CloudformationActions::ListExports => write!(f, "cloudformation:ListExports"),

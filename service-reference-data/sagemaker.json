@@ -113,7 +113,8 @@
     }, {
       "Name" : "model-explainability-job-definition"
     }, {
-      "Name" : "model-package"
+      "Name" : "model-package",
+      "ConditionKeys" : [ "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}", "sagemaker:CurrentModelLifeCycleStage", "sagemaker:CurrentModelLifeCycleStageStatus" ]
     }, {
       "Name" : "model-package-group"
     }, {
@@ -236,7 +237,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "model-package"
+      "Name" : "model-package",
+      "ConditionKeys" : [ "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}", "sagemaker:CurrentModelLifeCycleStage", "sagemaker:CurrentModelLifeCycleStageStatus" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1091,7 +1093,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "model-package"
+      "Name" : "model-package",
+      "ConditionKeys" : [ "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}", "sagemaker:CurrentModelLifeCycleStage", "sagemaker:CurrentModelLifeCycleStageStatus" ]
     }, {
       "Name" : "model-package-group"
     } ],
@@ -2236,7 +2239,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "model-package"
+      "Name" : "model-package",
+      "ConditionKeys" : [ "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}", "sagemaker:CurrentModelLifeCycleStage", "sagemaker:CurrentModelLifeCycleStageStatus" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2566,7 +2570,8 @@
     }, {
       "Name" : "model-explainability-job-definition"
     }, {
-      "Name" : "model-package"
+      "Name" : "model-package",
+      "ConditionKeys" : [ "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}", "sagemaker:CurrentModelLifeCycleStage", "sagemaker:CurrentModelLifeCycleStageStatus" ]
     }, {
       "Name" : "model-package-group"
     }, {
@@ -3521,7 +3526,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "model-package"
+      "Name" : "model-package",
+      "ConditionKeys" : [ "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}", "sagemaker:CurrentModelLifeCycleStage", "sagemaker:CurrentModelLifeCycleStageStatus" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -5467,7 +5473,8 @@
     }, {
       "Name" : "model-explainability-job-definition"
     }, {
-      "Name" : "model-package"
+      "Name" : "model-package",
+      "ConditionKeys" : [ "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}", "sagemaker:CurrentModelLifeCycleStage", "sagemaker:CurrentModelLifeCycleStageStatus" ]
     }, {
       "Name" : "model-package-group"
     }, {
@@ -6824,7 +6831,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "model-package"
+      "Name" : "model-package",
+      "ConditionKeys" : [ "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}", "sagemaker:CurrentModelLifeCycleStage", "sagemaker:CurrentModelLifeCycleStageStatus" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -7145,6 +7153,15 @@
     "Name" : "sagemaker:AppNetworkAccessType",
     "Types" : [ "String" ]
   }, {
+    "Name" : "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "sagemaker:CurrentModelLifeCycleStage",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "sagemaker:CurrentModelLifeCycleStageStatus",
+    "Types" : [ "String" ]
+  }, {
     "Name" : "sagemaker:CustomerMetadataProperties/${MetadataKey}",
     "Types" : [ "String" ]
   }, {
@@ -7417,7 +7434,8 @@
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "image-version",
-    "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:image-version/${ImageName}/${Version}" ]
+    "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:image-version/${ImageName}/${Version}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "inference-component",
     "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:inference-component/${InferenceComponentName}" ],
@@ -7465,7 +7483,7 @@
   }, {
     "Name" : "model-package",
     "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:model-package/${ModelPackageName}" ],
-    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}", "sagemaker:CurrentModelLifeCycleStage", "sagemaker:CurrentModelLifeCycleStageStatus", "sagemaker:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "model-package-group",
     "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:model-package-group/${ModelPackageGroupName}" ],

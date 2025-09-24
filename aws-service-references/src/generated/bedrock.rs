@@ -10,6 +10,7 @@ pub enum BedrockActions {
     BatchDeleteEvaluationJob,
     CallWithBearerToken,
     CancelAutomatedReasoningPolicyBuildWorkflow,
+    CountTokens,
     CreateAgent,
     CreateAgentActionGroup,
     CreateAgentAlias,
@@ -251,6 +252,7 @@ impl std::fmt::Display for BedrockActions {
             BedrockActions::CancelAutomatedReasoningPolicyBuildWorkflow => {
                 write!(f, "bedrock:CancelAutomatedReasoningPolicyBuildWorkflow")
             }
+            BedrockActions::CountTokens => write!(f, "bedrock:CountTokens"),
             BedrockActions::CreateAgent => write!(f, "bedrock:CreateAgent"),
             BedrockActions::CreateAgentActionGroup => write!(f, "bedrock:CreateAgentActionGroup"),
             BedrockActions::CreateAgentAlias => write!(f, "bedrock:CreateAgentAlias"),

@@ -7,6 +7,7 @@ pub enum CleanroomsActions {
     BatchGetSchemaAnalysisRule,
     CreateAnalysisTemplate,
     CreateCollaboration,
+    CreateCollaborationChangeRequest,
     CreateConfiguredAudienceModelAssociation,
     CreateConfiguredTable,
     CreateConfiguredTableAnalysisRule,
@@ -31,6 +32,7 @@ pub enum CleanroomsActions {
     GetAnalysisTemplate,
     GetCollaboration,
     GetCollaborationAnalysisTemplate,
+    GetCollaborationChangeRequest,
     GetCollaborationConfiguredAudienceModelAssociation,
     GetCollaborationIdNamespaceAssociation,
     GetCollaborationPrivacyBudgetTemplate,
@@ -49,6 +51,7 @@ pub enum CleanroomsActions {
     GetSchemaAnalysisRule,
     ListAnalysisTemplates,
     ListCollaborationAnalysisTemplates,
+    ListCollaborationChangeRequests,
     ListCollaborationConfiguredAudienceModelAssociations,
     ListCollaborationIdNamespaceAssociations,
     ListCollaborationPrivacyBudgetTemplates,
@@ -105,6 +108,9 @@ impl std::fmt::Display for CleanroomsActions {
                 write!(f, "cleanrooms:CreateAnalysisTemplate")
             }
             CleanroomsActions::CreateCollaboration => write!(f, "cleanrooms:CreateCollaboration"),
+            CleanroomsActions::CreateCollaborationChangeRequest => {
+                write!(f, "cleanrooms:CreateCollaborationChangeRequest")
+            }
             CleanroomsActions::CreateConfiguredAudienceModelAssociation => {
                 write!(f, "cleanrooms:CreateConfiguredAudienceModelAssociation")
             }
@@ -161,6 +167,9 @@ impl std::fmt::Display for CleanroomsActions {
             CleanroomsActions::GetCollaborationAnalysisTemplate => {
                 write!(f, "cleanrooms:GetCollaborationAnalysisTemplate")
             }
+            CleanroomsActions::GetCollaborationChangeRequest => {
+                write!(f, "cleanrooms:GetCollaborationChangeRequest")
+            }
             CleanroomsActions::GetCollaborationConfiguredAudienceModelAssociation => write!(
                 f,
                 "cleanrooms:GetCollaborationConfiguredAudienceModelAssociation"
@@ -203,6 +212,9 @@ impl std::fmt::Display for CleanroomsActions {
             }
             CleanroomsActions::ListCollaborationAnalysisTemplates => {
                 write!(f, "cleanrooms:ListCollaborationAnalysisTemplates")
+            }
+            CleanroomsActions::ListCollaborationChangeRequests => {
+                write!(f, "cleanrooms:ListCollaborationChangeRequests")
             }
             CleanroomsActions::ListCollaborationConfiguredAudienceModelAssociations => write!(
                 f,

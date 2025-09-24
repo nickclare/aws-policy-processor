@@ -82,6 +82,7 @@ pub enum Ec2Actions {
     CreateFlowLogs,
     CreateFpgaImage,
     CreateImage,
+    CreateImageUsageReport,
     CreateInstanceConnectEndpoint,
     CreateInstanceEventWindow,
     CreateInstanceExportTask,
@@ -169,6 +170,7 @@ pub enum Ec2Actions {
     DeleteFleets,
     DeleteFlowLogs,
     DeleteFpgaImage,
+    DeleteImageUsageReport,
     DeleteInstanceConnectEndpoint,
     DeleteInstanceEventWindow,
     DeleteInternetGateway,
@@ -297,6 +299,9 @@ pub enum Ec2Actions {
     DescribeIdFormat,
     DescribeIdentityIdFormat,
     DescribeImageAttribute,
+    DescribeImageReferences,
+    DescribeImageUsageReportEntries,
+    DescribeImageUsageReports,
     DescribeImages,
     DescribeImportImageTasks,
     DescribeImportSnapshotTasks,
@@ -572,6 +577,7 @@ pub enum Ec2Actions {
     ModifyImageAttribute,
     ModifyInstanceAttribute,
     ModifyInstanceCapacityReservationAttributes,
+    ModifyInstanceConnectEndpoint,
     ModifyInstanceCpuOptions,
     ModifyInstanceCreditSpecification,
     ModifyInstanceEventStartTime,
@@ -844,6 +850,7 @@ impl std::fmt::Display for Ec2Actions {
             Ec2Actions::CreateFlowLogs => write!(f, "ec2:CreateFlowLogs"),
             Ec2Actions::CreateFpgaImage => write!(f, "ec2:CreateFpgaImage"),
             Ec2Actions::CreateImage => write!(f, "ec2:CreateImage"),
+            Ec2Actions::CreateImageUsageReport => write!(f, "ec2:CreateImageUsageReport"),
             Ec2Actions::CreateInstanceConnectEndpoint => {
                 write!(f, "ec2:CreateInstanceConnectEndpoint")
             }
@@ -990,6 +997,7 @@ impl std::fmt::Display for Ec2Actions {
             Ec2Actions::DeleteFleets => write!(f, "ec2:DeleteFleets"),
             Ec2Actions::DeleteFlowLogs => write!(f, "ec2:DeleteFlowLogs"),
             Ec2Actions::DeleteFpgaImage => write!(f, "ec2:DeleteFpgaImage"),
+            Ec2Actions::DeleteImageUsageReport => write!(f, "ec2:DeleteImageUsageReport"),
             Ec2Actions::DeleteInstanceConnectEndpoint => {
                 write!(f, "ec2:DeleteInstanceConnectEndpoint")
             }
@@ -1219,6 +1227,11 @@ impl std::fmt::Display for Ec2Actions {
             Ec2Actions::DescribeIdFormat => write!(f, "ec2:DescribeIdFormat"),
             Ec2Actions::DescribeIdentityIdFormat => write!(f, "ec2:DescribeIdentityIdFormat"),
             Ec2Actions::DescribeImageAttribute => write!(f, "ec2:DescribeImageAttribute"),
+            Ec2Actions::DescribeImageReferences => write!(f, "ec2:DescribeImageReferences"),
+            Ec2Actions::DescribeImageUsageReportEntries => {
+                write!(f, "ec2:DescribeImageUsageReportEntries")
+            }
+            Ec2Actions::DescribeImageUsageReports => write!(f, "ec2:DescribeImageUsageReports"),
             Ec2Actions::DescribeImages => write!(f, "ec2:DescribeImages"),
             Ec2Actions::DescribeImportImageTasks => write!(f, "ec2:DescribeImportImageTasks"),
             Ec2Actions::DescribeImportSnapshotTasks => write!(f, "ec2:DescribeImportSnapshotTasks"),
@@ -1766,6 +1779,9 @@ impl std::fmt::Display for Ec2Actions {
             Ec2Actions::ModifyInstanceAttribute => write!(f, "ec2:ModifyInstanceAttribute"),
             Ec2Actions::ModifyInstanceCapacityReservationAttributes => {
                 write!(f, "ec2:ModifyInstanceCapacityReservationAttributes")
+            }
+            Ec2Actions::ModifyInstanceConnectEndpoint => {
+                write!(f, "ec2:ModifyInstanceConnectEndpoint")
             }
             Ec2Actions::ModifyInstanceCpuOptions => write!(f, "ec2:ModifyInstanceCpuOptions"),
             Ec2Actions::ModifyInstanceCreditSpecification => {

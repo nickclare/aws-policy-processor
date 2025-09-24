@@ -514,8 +514,8 @@
       "Name" : "tenant"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateTenantResourceAssociation",
@@ -538,8 +538,8 @@
       "Name" : "tenant"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateTrafficPolicy",
@@ -997,8 +997,8 @@
       "Name" : "tenant"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteTenantResourceAssociation",
@@ -1021,8 +1021,8 @@
       "Name" : "tenant"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteTrafficPolicy",
@@ -1925,8 +1925,8 @@
       "Name" : "tenant"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetTrafficPolicy",
@@ -2370,8 +2370,8 @@
       "Name" : "tenant"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListResourceTenants",
@@ -2392,8 +2392,8 @@
       "Name" : "template"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListRuleSets",
@@ -2496,8 +2496,8 @@
       "Name" : "tenant"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListTenants",
@@ -2511,8 +2511,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListTrafficPolicies",

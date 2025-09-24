@@ -74,6 +74,7 @@ pub enum WisdomActions {
     RemoveAssistantAiAgent,
     RemoveKnowledgeBaseTemplateUri,
     RenderMessageTemplate,
+    Retrieve,
     SearchContent,
     SearchMessageTemplates,
     SearchQuickResponses,
@@ -192,6 +193,7 @@ impl std::fmt::Display for WisdomActions {
                 write!(f, "wisdom:RemoveKnowledgeBaseTemplateUri")
             }
             WisdomActions::RenderMessageTemplate => write!(f, "wisdom:RenderMessageTemplate"),
+            WisdomActions::Retrieve => write!(f, "wisdom:Retrieve"),
             WisdomActions::SearchContent => write!(f, "wisdom:SearchContent"),
             WisdomActions::SearchMessageTemplates => write!(f, "wisdom:SearchMessageTemplates"),
             WisdomActions::SearchQuickResponses => write!(f, "wisdom:SearchQuickResponses"),

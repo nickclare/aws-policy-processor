@@ -486,7 +486,7 @@
     }
   }, {
     "Name" : "DeleteObject",
-    "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
+    "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:if-match", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1416,7 +1416,7 @@
     }
   }, {
     "Name" : "GetObject",
-    "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:if-match", "s3:if-none-match", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
+    "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2955,8 +2955,8 @@
       "Name" : "bucket"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "UpdateJobPriority",

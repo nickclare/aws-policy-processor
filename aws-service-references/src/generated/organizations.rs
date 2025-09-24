@@ -35,11 +35,13 @@ pub enum OrganizationsActions {
     LeaveOrganization,
     ListAccounts,
     ListAccountsForParent,
+    ListAccountsWithInvalidEffectivePolicy,
     ListAwsServiceAccessForOrganization,
     ListChildren,
     ListCreateAccountStatus,
     ListDelegatedAdministrators,
     ListDelegatedServicesForAccount,
+    ListEffectivePolicyValidationErrors,
     ListHandshakesForAccount,
     ListHandshakesForOrganization,
     ListOrganizationalUnitsForParent,
@@ -126,6 +128,9 @@ impl std::fmt::Display for OrganizationsActions {
             OrganizationsActions::ListAccountsForParent => {
                 write!(f, "organizations:ListAccountsForParent")
             }
+            OrganizationsActions::ListAccountsWithInvalidEffectivePolicy => {
+                write!(f, "organizations:ListAccountsWithInvalidEffectivePolicy")
+            }
             OrganizationsActions::ListAwsServiceAccessForOrganization => {
                 write!(f, "organizations:ListAWSServiceAccessForOrganization")
             }
@@ -138,6 +143,9 @@ impl std::fmt::Display for OrganizationsActions {
             }
             OrganizationsActions::ListDelegatedServicesForAccount => {
                 write!(f, "organizations:ListDelegatedServicesForAccount")
+            }
+            OrganizationsActions::ListEffectivePolicyValidationErrors => {
+                write!(f, "organizations:ListEffectivePolicyValidationErrors")
             }
             OrganizationsActions::ListHandshakesForAccount => {
                 write!(f, "organizations:ListHandshakesForAccount")

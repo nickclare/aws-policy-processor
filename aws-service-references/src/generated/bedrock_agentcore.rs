@@ -66,6 +66,7 @@ pub enum BedrockAgentcoreActions {
     ListMemoryRecords,
     ListOauth2CredentialProviders,
     ListSessions,
+    ListTagsForResource,
     ListWorkloadIdentities,
     RetrieveMemoryRecords,
     SetTokenVaultCmk,
@@ -74,6 +75,8 @@ pub enum BedrockAgentcoreActions {
     StopBrowserSession,
     StopCodeInterpreterSession,
     SynchronizeGatewayTargets,
+    TagResource,
+    UntagResource,
     UpdateAgentRuntime,
     UpdateAgentRuntimeEndpoint,
     UpdateApiKeyCredentialProvider,
@@ -241,6 +244,9 @@ impl std::fmt::Display for BedrockAgentcoreActions {
                 write!(f, "bedrock-agentcore:ListOauth2CredentialProviders")
             }
             BedrockAgentcoreActions::ListSessions => write!(f, "bedrock-agentcore:ListSessions"),
+            BedrockAgentcoreActions::ListTagsForResource => {
+                write!(f, "bedrock-agentcore:ListTagsForResource")
+            }
             BedrockAgentcoreActions::ListWorkloadIdentities => {
                 write!(f, "bedrock-agentcore:ListWorkloadIdentities")
             }
@@ -265,6 +271,8 @@ impl std::fmt::Display for BedrockAgentcoreActions {
             BedrockAgentcoreActions::SynchronizeGatewayTargets => {
                 write!(f, "bedrock-agentcore:SynchronizeGatewayTargets")
             }
+            BedrockAgentcoreActions::TagResource => write!(f, "bedrock-agentcore:TagResource"),
+            BedrockAgentcoreActions::UntagResource => write!(f, "bedrock-agentcore:UntagResource"),
             BedrockAgentcoreActions::UpdateAgentRuntime => {
                 write!(f, "bedrock-agentcore:UpdateAgentRuntime")
             }

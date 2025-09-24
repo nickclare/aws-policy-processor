@@ -8,6 +8,7 @@ pub enum MediaconvertActions {
     CreateJobTemplate,
     CreatePreset,
     CreateQueue,
+    CreateResourceShare,
     DeleteJobTemplate,
     DeletePolicy,
     DeletePreset,
@@ -45,6 +46,9 @@ impl std::fmt::Display for MediaconvertActions {
             MediaconvertActions::CreateJobTemplate => write!(f, "mediaconvert:CreateJobTemplate"),
             MediaconvertActions::CreatePreset => write!(f, "mediaconvert:CreatePreset"),
             MediaconvertActions::CreateQueue => write!(f, "mediaconvert:CreateQueue"),
+            MediaconvertActions::CreateResourceShare => {
+                write!(f, "mediaconvert:CreateResourceShare")
+            }
             MediaconvertActions::DeleteJobTemplate => write!(f, "mediaconvert:DeleteJobTemplate"),
             MediaconvertActions::DeletePolicy => write!(f, "mediaconvert:DeletePolicy"),
             MediaconvertActions::DeletePreset => write!(f, "mediaconvert:DeletePreset"),

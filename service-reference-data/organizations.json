@@ -565,6 +565,21 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListAccountsWithInvalidEffectivePolicy",
+    "ActionConditionKeys" : [ "organizations:PolicyType" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListChildren",
     "Annotations" : {
       "Properties" : {
@@ -628,6 +643,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListEffectivePolicyValidationErrors",
+    "ActionConditionKeys" : [ "organizations:PolicyType" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "account"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ListHandshakesForAccount",
@@ -748,6 +781,7 @@
     }
   }, {
     "Name" : "ListTagsForResource",
+    "ActionConditionKeys" : [ "organizations:PolicyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -865,7 +899,7 @@
     }
   }, {
     "Name" : "TagResource",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "organizations:PolicyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -892,7 +926,7 @@
     }
   }, {
     "Name" : "UntagResource",
-    "ActionConditionKeys" : [ "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:TagKeys", "organizations:PolicyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,

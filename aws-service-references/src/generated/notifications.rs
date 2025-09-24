@@ -5,6 +5,7 @@ pub enum NotificationsActions {
     AssociateChannel,
     AssociateManagedNotificationAccountContact,
     AssociateManagedNotificationAdditionalChannel,
+    AssociateOrganizationalUnit,
     CreateEventRule,
     CreateNotificationConfiguration,
     DeleteEventRule,
@@ -14,6 +15,7 @@ pub enum NotificationsActions {
     DisassociateChannel,
     DisassociateManagedNotificationAccountContact,
     DisassociateManagedNotificationAdditionalChannel,
+    DisassociateOrganizationalUnit,
     EnableNotificationsAccessForOrganization,
     GetEventRule,
     GetFeatureOptInStatus,
@@ -29,9 +31,11 @@ pub enum NotificationsActions {
     ListManagedNotificationChildEvents,
     ListManagedNotificationConfigurations,
     ListManagedNotificationEvents,
+    ListMemberAccounts,
     ListNotificationConfigurations,
     ListNotificationEvents,
     ListNotificationHubs,
+    ListOrganizationalUnits,
     ListTagsForResource,
     PutFeatureOptInStatus,
     RegisterNotificationHub,
@@ -52,6 +56,9 @@ impl std::fmt::Display for NotificationsActions {
                 f,
                 "notifications:AssociateManagedNotificationAdditionalChannel"
             ),
+            NotificationsActions::AssociateOrganizationalUnit => {
+                write!(f, "notifications:AssociateOrganizationalUnit")
+            }
             NotificationsActions::CreateEventRule => write!(f, "notifications:CreateEventRule"),
             NotificationsActions::CreateNotificationConfiguration => {
                 write!(f, "notifications:CreateNotificationConfiguration")
@@ -77,6 +84,9 @@ impl std::fmt::Display for NotificationsActions {
                 f,
                 "notifications:DisassociateManagedNotificationAdditionalChannel"
             ),
+            NotificationsActions::DisassociateOrganizationalUnit => {
+                write!(f, "notifications:DisassociateOrganizationalUnit")
+            }
             NotificationsActions::EnableNotificationsAccessForOrganization => {
                 write!(f, "notifications:EnableNotificationsAccessForOrganization")
             }
@@ -117,6 +127,9 @@ impl std::fmt::Display for NotificationsActions {
             NotificationsActions::ListManagedNotificationEvents => {
                 write!(f, "notifications:ListManagedNotificationEvents")
             }
+            NotificationsActions::ListMemberAccounts => {
+                write!(f, "notifications:ListMemberAccounts")
+            }
             NotificationsActions::ListNotificationConfigurations => {
                 write!(f, "notifications:ListNotificationConfigurations")
             }
@@ -125,6 +138,9 @@ impl std::fmt::Display for NotificationsActions {
             }
             NotificationsActions::ListNotificationHubs => {
                 write!(f, "notifications:ListNotificationHubs")
+            }
+            NotificationsActions::ListOrganizationalUnits => {
+                write!(f, "notifications:ListOrganizationalUnits")
             }
             NotificationsActions::ListTagsForResource => {
                 write!(f, "notifications:ListTagsForResource")

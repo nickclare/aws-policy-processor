@@ -2,10 +2,12 @@
 
 #[derive(Debug, Clone, Copy, std :: cmp :: PartialEq, std :: cmp :: Eq, std :: hash :: Hash)]
 pub enum EvsActions {
+    AssociateEipToVlan,
     CreateEnvironment,
     CreateEnvironmentHost,
     DeleteEnvironment,
     DeleteEnvironmentHost,
+    DisassociateEipFromVlan,
     GetEnvironment,
     ListEnvironmentHosts,
     ListEnvironmentVlans,
@@ -17,10 +19,12 @@ pub enum EvsActions {
 impl std::fmt::Display for EvsActions {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
+            EvsActions::AssociateEipToVlan => write!(f, "evs:AssociateEipToVlan"),
             EvsActions::CreateEnvironment => write!(f, "evs:CreateEnvironment"),
             EvsActions::CreateEnvironmentHost => write!(f, "evs:CreateEnvironmentHost"),
             EvsActions::DeleteEnvironment => write!(f, "evs:DeleteEnvironment"),
             EvsActions::DeleteEnvironmentHost => write!(f, "evs:DeleteEnvironmentHost"),
+            EvsActions::DisassociateEipFromVlan => write!(f, "evs:DisassociateEipFromVlan"),
             EvsActions::GetEnvironment => write!(f, "evs:GetEnvironment"),
             EvsActions::ListEnvironmentHosts => write!(f, "evs:ListEnvironmentHosts"),
             EvsActions::ListEnvironmentVlans => write!(f, "evs:ListEnvironmentVlans"),

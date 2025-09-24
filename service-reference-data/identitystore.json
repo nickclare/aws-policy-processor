@@ -39,6 +39,20 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateIdentityStore",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateUser",
     "Annotations" : {
       "Properties" : {
@@ -96,6 +110,20 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteIdentityStore",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteUser",
@@ -359,6 +387,20 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "UpdateIdentityStore",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "UpdateUser",

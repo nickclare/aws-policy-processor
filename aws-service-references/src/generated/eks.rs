@@ -31,6 +31,7 @@ pub enum EksActions {
     DescribeFargateProfile,
     DescribeIdentityProviderConfig,
     DescribeInsight,
+    DescribeInsightsRefresh,
     DescribeNodegroup,
     DescribePodIdentityAssociation,
     DescribeUpdate,
@@ -52,6 +53,7 @@ pub enum EksActions {
     ListTagsForResource,
     ListUpdates,
     RegisterCluster,
+    StartInsightsRefresh,
     TagResource,
     UntagResource,
     UpdateAccessEntry,
@@ -109,6 +111,7 @@ impl std::fmt::Display for EksActions {
                 write!(f, "eks:DescribeIdentityProviderConfig")
             }
             EksActions::DescribeInsight => write!(f, "eks:DescribeInsight"),
+            EksActions::DescribeInsightsRefresh => write!(f, "eks:DescribeInsightsRefresh"),
             EksActions::DescribeNodegroup => write!(f, "eks:DescribeNodegroup"),
             EksActions::DescribePodIdentityAssociation => {
                 write!(f, "eks:DescribePodIdentityAssociation")
@@ -138,6 +141,7 @@ impl std::fmt::Display for EksActions {
             EksActions::ListTagsForResource => write!(f, "eks:ListTagsForResource"),
             EksActions::ListUpdates => write!(f, "eks:ListUpdates"),
             EksActions::RegisterCluster => write!(f, "eks:RegisterCluster"),
+            EksActions::StartInsightsRefresh => write!(f, "eks:StartInsightsRefresh"),
             EksActions::TagResource => write!(f, "eks:TagResource"),
             EksActions::UntagResource => write!(f, "eks:UntagResource"),
             EksActions::UpdateAccessEntry => write!(f, "eks:UpdateAccessEntry"),
